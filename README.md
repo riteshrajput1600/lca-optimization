@@ -103,4 +103,4 @@ This project is for demonstration and educational purposes.
 
 SnapShots
 
-![alt text](image.png)
+![alt text](image-1.png)
