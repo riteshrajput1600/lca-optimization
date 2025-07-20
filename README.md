@@ -1,36 +1,101 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# LCA Optimization Review UI
+
+This project is a simplified React/Next.js UI for reviewing AI-driven Life Cycle Assessment (LCA) optimization suggestions. It allows engineers to view the original and AI-optimized LCA values for a crate, see the AI's reasoning, and approve or reject the suggestion. All data and API calls are simulated for demonstration purposes.
+
+## Features
+
+- **Displays** original and AI-suggested optimized LCA values.
+- **Shows** the AI's optimization reason.
+- **Visual indicator** of percentage reduction.
+- **Approve/Reject** buttons for user feedback.
+- **Mock API integration** for data fetching and review submission.
+- **Responsive design** using Tailwind CSS.
+- **Success/Error messages** based on simulated API responses.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- [Node.js](https://nodejs.org/) (v18 or newer recommended)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+- [Next.js](https://nextjs.org/) project (this UI is designed for Next.js 13+ with the `/app` directory)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+1. **Clone the repository** (or copy the files into your Next.js project):
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+    ```sh
+    git clone <your-repo-url>
+    cd lca-optimization
+    ```
 
-## Learn More
+2. **Install dependencies** (if you haven't already):
 
-To learn more about Next.js, take a look at the following resources:
+    ```sh
+    npm install
+    # or
+    yarn install
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **Ensure Tailwind CSS is set up** in your Next.js project.  
+   If not, follow the [Tailwind CSS Next.js installation guide](https://tailwindcss.com/docs/guides/nextjs).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4. **Project Structure**:
 
-## Deploy on Vercel
+    ```
+    src/
+      app/
+        LCAOptimization.jsx      # Main UI component
+        lcaApi.js                # Mock API functions
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Running the Project
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Start the development server**:
+
+    ```sh
+    npm run dev
+    # or
+    yarn dev
+    ```
+
+2. **Open your browser** and navigate to [http://localhost:3000](http://localhost:3000).
+
+3. **Access the UI**  
+   Import and use the `LCAOptimization` component in your desired page (e.g., `src/app/page.jsx`):
+
+    ```jsx
+    import LCAOptimization from "./LCAOptimization";
+
+    export default function Page() {
+      return <LCAOptimization />;
+    }
+    ```
+
+### How It Works
+
+- **Data Fetching:**  
+  The UI fetches mock LCA data using `fetchLCAData()` from `lcaApi.js` (simulated with `setTimeout`).
+
+- **User Actions:**  
+  When you click "Approve" or "Reject", the UI calls `submitReviewDecision()` (also simulated).  
+  Success or error messages are displayed based on a random outcome.
+
+- **Styling:**  
+  All styling uses Tailwind CSS classes for a modern, responsive look.
+
+## Customization
+
+- **Change mock data:**  
+  Edit `src/app/lcaApi.js` to modify the LCA values or optimization reason.
+- **Integrate real APIs:**  
+  Replace the mock functions with real API calls as needed.
+
+## Troubleshooting
+
+- If you see a React hook error, ensure `"use client"` is at the top of your component file.
+- Make sure Tailwind CSS is properly configured in your project.
+
+## License
+
+This project is for demonstration and educational purposes.
