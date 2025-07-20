@@ -98,7 +98,7 @@ This project is a simplified React/Next.js UI for reviewing AI-driven Life Cycle
 
 ## License
 
-This project is for demonstration and educational purposes.
+No License. This project is for demonstration and educational purposes.
 
 
 SnapShots
