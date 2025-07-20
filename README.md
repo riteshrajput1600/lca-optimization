@@ -25,7 +25,7 @@ This project is a simplified React/Next.js UI for reviewing AI-driven Life Cycle
 1. **Clone the repository** (or copy the files into your Next.js project):
 
     ```sh
-    git clone <your-repo-url>
+    git clone https://github.com/riteshrajput1600/lca-optimization.git
     cd lca-optimization
     ```
 
@@ -99,3 +99,8 @@ This project is a simplified React/Next.js UI for reviewing AI-driven Life Cycle
 ## License
 
 This project is for demonstration and educational purposes.
+
+
+SnapShots
+
+![alt text](image.png)
